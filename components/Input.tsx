@@ -25,7 +25,16 @@ function Input() {
   const [showEmojis, setShowEmojis] = useState(false);
   const filePickerRef = useRef<any>();
 
-  function addImageToPost() {}
+  function addImageToPost(e: any) {
+    const reader = new FileReader();
+    if (e.target.files[0]) {
+      reader.readAsDataURL(e.target.files[0]);
+    }
+
+    reader.onload = (readerEvent: any) => {
+      setSelectedFile(readerEvent.target.result);
+    };
+  }
 
   function addEmoji(e: any) {
     let sym = e.unified.split("-");
@@ -37,7 +46,7 @@ function Input() {
 
   async function sendPost() {
     if (loading) return;
-    setLoading(false);
+    setLoading(true);
 
     const docRef = await addDoc(collection(db, "posts"), {
       // id: session.user.uid,
@@ -59,7 +68,7 @@ function Input() {
       });
     }
 
-    setLoading(true);
+    setLoading(false);
     setInput("");
     setSelectedFile(null);
     setShowEmojis(false);
