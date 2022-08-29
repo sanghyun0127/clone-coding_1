@@ -23,6 +23,9 @@ https://www.youtube.com/watch?v=5Wak0iyGCrc&list=WL&index=2&t=3890s
 
 1. 콘솔에서 설치하는 법, cli 로 설치하는 법이 있는데 콘솔에서 설치하는 것이 편함
 2. 원본 삭제 + 200\*200 + jpeg변환 => 140kb -> 7kb
+3. uploadString 으로 업데이트 하고 downloadURL 로 url 가져오면 resizedImage 가 아니라 원본 Image url 을 가져옴
+4. resize 하고 저장할 때 url 이 달라지는 문제
+5. 임시방편: url 에서 token 지우고 image 이름을 바꿔서 url을 firestore 에 저장
 
 ### tailwind css
 
