@@ -23,6 +23,7 @@
     "quotes": ["warn", "single"],
     "semi": ["warn", "always"],
     "react/no-unescaped-entities": 0,
+    "prefer-const": 0,
     // suppress errors for missing 'import React' in files
     "react/react-in-jsx-scope": "off",
     "no-unused-vars": 0,
