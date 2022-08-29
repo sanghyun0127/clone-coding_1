@@ -19,12 +19,13 @@
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
     "indent": ["warn", 2],
-    "linebreak-style": ["error", "unix"],
+    "linebreak-style": ["warn", "unix"],
     "quotes": ["warn", "single"],
     "semi": ["warn", "always"],
     "react/no-unescaped-entities": 0,
     // suppress errors for missing 'import React' in files
     "react/react-in-jsx-scope": "off",
+    "no-unused-vars": 0,
     // allow jsx syntax in js files (for next.js project)
     "react/jsx-filename-extension": [
       1,
